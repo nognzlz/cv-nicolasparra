@@ -33,8 +33,8 @@ export const Sidebar = ({ menuItems }: Props) => {
                   font-kodchasan
                   text-base
                   relative 
-                  hover:bg-gradient-primary
-                  [&.active]:bg-gradient-primary
+                  hover:bg-green-300
+                  [&.active]:bg-green-300
                   hover:bg-clip-text
                   [&.active]:bg-clip-text
                   hover:text-transparent
