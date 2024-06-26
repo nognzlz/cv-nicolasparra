@@ -6,9 +6,9 @@ type Props = {
 
 export const PageContent = ({ children }: Props) => {
   return (
-    <div className="w-full">
+    <main className="w-full">
       <div className="h-16"></div>
       {children}
-    </div>
+    </main>
   );
 };
