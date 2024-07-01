@@ -3,63 +3,11 @@
 import React, { Fragment } from "react";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import { Dialog, Transition, TransitionChild } from "@headlessui/react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Bars3Icon } from "@heroicons/react/24/solid";
-import { Nunito } from "next/font/google";
+import { Navigation } from "../Navigation";
 
-const nunito = Nunito({ weight: "400", subsets: ["latin"] });
-
-interface Props extends React.PropsWithChildren {
-  menuItems: {
-    label: string;
-    url: string;
-  }[];
-}
-
-export const Sidebar = ({ menuItems }: Props) => {
+export const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
-
-  const MenuItem = ({ label, url }: { label: string; url: string }) => {
-    const pathname = usePathname();
-
-    return (
-      <Link href={url} passHref>
-        <li
-          className={`
-                text-white 
-                  inline-block
-                  font-kodchasan
-                  text-base
-                  relative 
-                  hover:bg-green-300
-                  [&.active]:bg-green-300
-                  hover:bg-clip-text
-                  [&.active]:bg-clip-text
-                  hover:text-transparent
-                  [&.active]:text-transparent
-                  hover:drop-shadow-primary-hover
-                  [&.active]:drop-shadow-primary-hover
-                  cursor-default
-                  transition-all
-                  ease-in-out
-                  duration-300 
-                  hover:after:absolute
-                  [&.active]:after:absolute
-                  hover:after:translate-y-3
-                  [&.active]:after:translate-y-3
-                  ${pathname === url ? "active" : ""}
-                  ${nunito.className}
-                  `}
-          onClick={() => {
-            setSidebarOpen(false);
-          }}
-        >
-          {label}
-        </li>
-      </Link>
-    );
-  };
 
   return (
     <>
@@ -119,19 +67,7 @@ export const Sidebar = ({ menuItems }: Props) => {
                   </div>
                 </TransitionChild>
                 <div className="mt-5 flex-1 h-0 overflow-y-auto">
-                  {
-                    <ul className="flex flex-col px-4 space-y-8 w-fit">
-                      {menuItems.map((item) => {
-                        return (
-                          <MenuItem
-                            key={item.label}
-                            label={item.label}
-                            url={item.url}
-                          />
-                        );
-                      })}
-                    </ul>
-                  }
+                  <Navigation onNavigate={() => setSidebarOpen(false)} />
                 </div>
               </div>
             </TransitionChild>

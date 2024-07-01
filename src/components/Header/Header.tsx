@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 import { Sidebar } from "../Sidebar";
+import { Navigation } from "../Navigation";
 
 const BG_CLASSES = "bg-gradient-to-tr from-slate-700 to-blue-950";
 
@@ -12,14 +13,10 @@ export const Header = () => {
         BG_CLASSES
       )}
     >
-      <Sidebar
-        menuItems={[
-          {
-            label: "Contact me",
-            url: "/contact-me",
-          },
-        ]}
-      />
+      <Sidebar />
+      <div className="invisible md:visible">
+        <Navigation />
+      </div>
     </div>
   );
 };
