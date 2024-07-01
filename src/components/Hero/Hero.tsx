@@ -1,9 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Roboto } from "next/font/google";
-import clsx from "clsx";
-
-const roboto = Roboto({ weight: "500", subsets: ["latin"] });
+import { Heading } from "../Heading";
 
 export const Hero = () => {
   return (
@@ -27,15 +24,8 @@ export const Hero = () => {
               className="rounded-full"
             />
           </div>
-          <div className="flex flex-col items-center text-center gap-y-2">
-            <h1
-              className={clsx(
-                "text-3xl md:text-[70px] font-bold text-white",
-                roboto.className
-              )}
-            >
-              Nicolas Gonzalez Parra
-            </h1>
+          <div className="flex flex-col items-center text-center p-8">
+            <Heading>Nicolas Gonzalez Parra</Heading>
           </div>
         </div>
       </div>
