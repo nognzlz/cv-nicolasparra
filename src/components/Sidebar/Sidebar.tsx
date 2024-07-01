@@ -4,24 +4,23 @@ import React, { Fragment } from "react";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import { Dialog, Transition, TransitionChild } from "@headlessui/react";
 import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { Nunito } from "next/font/google";
 
 const nunito = Nunito({ weight: "400", subsets: ["latin"] });
 
-type Props = {
+interface Props extends React.PropsWithChildren {
   menuItems: {
     label: string;
     url: string;
   }[];
-};
+}
 
 export const Sidebar = ({ menuItems }: Props) => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   const MenuItem = ({ label, url }: { label: string; url: string }) => {
-    const router = useRouter();
     const pathname = usePathname();
 
     return (
