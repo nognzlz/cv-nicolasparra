@@ -1,10 +1,6 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import clsx from "clsx";
 import { Nunito } from "next/font/google";
-import { PageWrapper } from "@/components/Layout/PageWrapper";
-import { PageContent } from "@/components/Layout/PageContent";
 import { Computer } from "@/components/Icons/Computer";
 
 const nunito = Nunito({ weight: "400", subsets: ["latin"] });
@@ -12,24 +8,18 @@ const nunito = Nunito({ weight: "400", subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-      <Header />
-      <PageWrapper>
-        <PageContent>
-          <Hero />
-          <div className="flex w-90% md:w-[750px] mx-auto flex-col items-center p-12 bg-gradient-radial from-slate-300/25 from-10% via-transparent via-55% to-transparent">
-            <Computer className="md:w-64 md:h-64 w-48 h-48" />
-          </div>
-          <p
-            className={clsx(
-              "container text-gray-200 text-center text-xl max-w-[900px] px-4 mx-auto",
-              nunito.className
-            )}
-          >
-            Software development services
-          </p>
-        </PageContent>
-      </PageWrapper>
-      <Footer />
+      <Hero />
+      <div className="flex w-90% md:w-[750px] mx-auto flex-col items-center p-12 bg-gradient-radial from-slate-300/25 from-10% via-transparent via-55% to-transparent">
+        <Computer className="md:w-64 md:h-64 w-48 h-48" />
+      </div>
+      <p
+        className={clsx(
+          "container text-gray-200 text-center text-xl max-w-[900px] px-4 mx-auto",
+          nunito.className
+        )}
+      >
+        Software development services
+      </p>
     </>
   );
 }

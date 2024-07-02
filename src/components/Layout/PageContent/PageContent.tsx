@@ -7,7 +7,7 @@ type Props = {
 export const PageContent = ({ children }: Props) => {
   return (
     <main className="w-full">
-      <div className="h-16"></div>
+      <div className="h-20"></div>
       {children}
     </main>
   );
