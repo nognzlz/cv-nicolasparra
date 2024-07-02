@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { Roboto } from "next/font/google";
 import React, { PropsWithChildren } from "react";
 
-const roboto = Roboto({ weight: "500", subsets: ["latin"] });
+const roboto = Roboto({ weight: "500", style: "italic", subsets: ["latin"] });
 
 export const Heading = ({
   children,
