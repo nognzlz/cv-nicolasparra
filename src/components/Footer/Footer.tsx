@@ -9,7 +9,7 @@ const BG_CLASSES = "bg-gradient-to-tr from-slate-700 to-blue-950";
 
 export const Footer = () => {
   return (
-    <div className={clsx("h-20 w-full mt-6", BG_CLASSES)}>
+    <div className={clsx("h-20 w-full", BG_CLASSES)}>
       <div className="container py-4 mx-auto">
         <div className="flex flex-row justify-center">
           <a
