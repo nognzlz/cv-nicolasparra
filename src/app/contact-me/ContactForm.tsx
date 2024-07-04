@@ -7,6 +7,7 @@ import { Textarea } from "@/components/Input/Textarea";
 import { Button } from "@/components/Button/Button";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
+import { notifyContactMessage } from "./actions";
 
 export const ContactForm = () => {
   type Inputs = {
@@ -19,7 +20,7 @@ export const ContactForm = () => {
   const { handleSubmit } = formMethods;
 
   function onSubmit(data: Inputs) {
-    console.log(data);
+    notifyContactMessage(data);
   }
 
   return (
