@@ -22,7 +22,7 @@ export const ContactForm = () => {
   const { handleSubmit } = formMethods;
 
   const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [isSubmitted, setIsSubmitted] = React.useState(true);
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
   const [isError, setIsError] = React.useState(false);
 
   async function onSubmit(data: Inputs) {
