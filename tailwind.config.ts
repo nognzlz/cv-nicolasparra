@@ -12,8 +12,14 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "gradient-primary": `linear-gradient(114.16deg, #FBE106 30.83%, #45AA9D 70.62%)`,
+        "gradient-primary": `linear-gradient(114.16deg, hsl(37, 99%, 67%) 30.83%, hsl(316, 73%, 52%) 70.62%)`,
       }),
+      dropShadow: {
+        glow: [
+          "0 -40px 30px rgba(255,255, 255, 0.35)",
+          "0 0px 15px rgba(255, 255,255, 0.2)",
+        ],
+      },
     },
   },
   plugins: [],

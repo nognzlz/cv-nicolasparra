@@ -9,9 +9,16 @@ interface Props {
   name: string;
   type?: string;
   placeholder?: string;
+  disabled?: boolean;
 }
 
-export const Input = ({ className, name, type, placeholder }: Props) => {
+export const Input = ({
+  className,
+  name,
+  type,
+  placeholder,
+  disabled,
+}: Props) => {
   const { register } = useFormContext();
 
   return (
@@ -20,6 +27,7 @@ export const Input = ({ className, name, type, placeholder }: Props) => {
       placeholder={placeholder}
       name={name}
       type={type || "text"}
+      disabled={disabled}
       className={`
         bg-transparent
         border

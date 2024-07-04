@@ -35,8 +35,8 @@ export const Navigation = ({ onNavigate }: Props) => {
                   [&.active]:bg-clip-text
                   hover:text-transparent
                   [&.active]:text-transparent
-                  hover:drop-shadow-primary-hover
-                  [&.active]:drop-shadow-primary-hover
+                  hover:drop-shadow-glow
+                  [&.active]:drop-shadow-glow
                   cursor-default
                   transition-all
                   ease-in-out

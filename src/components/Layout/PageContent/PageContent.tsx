@@ -6,7 +6,7 @@ type Props = {
 
 export const PageContent = ({ children }: Props) => {
   return (
-    <main className="w-full">
+    <main className="w-full h-full">
       <div className="h-16"></div>
       {children}
     </main>

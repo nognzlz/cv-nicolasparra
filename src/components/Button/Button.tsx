@@ -1,17 +1,28 @@
 import clsx from "clsx";
 import React, { MouseEventHandler, PropsWithChildren } from "react";
+import { Nunito } from "next/font/google";
+
+const nunito = Nunito({ subsets: ["latin"], weight: "300" });
 
 interface Props extends PropsWithChildren {
   className?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
-export const Button = ({ className, children, type, onClick }: Props) => {
+export const Button = ({
+  className,
+  children,
+  type,
+  onClick,
+  disabled,
+}: Props) => {
   return (
     <button
       className={clsx(
         ` text-gray-100
+            disabled:opacity-50
          bg-slate-800 border
          border-gray-200 border-opacity-50
           rounded-lg px-4 py-2
@@ -19,10 +30,12 @@ export const Button = ({ className, children, type, onClick }: Props) => {
           outline-opacity-50 outline-offset-2
           hover:bg-opacity-80
           focus:bg-opacity-80`,
-        className
+        className,
+        nunito.className
       )}
       type={type || "button"}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>
