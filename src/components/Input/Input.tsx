@@ -1,28 +1,23 @@
-import clsx from "clsx";
 import React from "react";
 import { useFormContext } from "react-hook-form";
-import { Nunito } from "next/font/google";
 
-const nunito = Nunito({ subsets: ["latin"], weight: "300" });
-
-export const Textarea = ({
-  className,
-  name,
-  placeholder,
-}: {
+interface Props {
   className?: string;
   name: string;
+  type?: string;
   placeholder?: string;
-}) => {
+}
+
+export const Input = ({ className, name, type, placeholder }: Props) => {
   const { register } = useFormContext();
+
   return (
-    <textarea
+    <input
       {...register(name)}
       placeholder={placeholder}
-      className={clsx(
-        nunito.className,
-        className,
-        `
+      name={name}
+      type={type || "text"}
+      className={`
         bg-transparent
         border
         border-gray-200
@@ -34,9 +29,7 @@ export const Textarea = ({
         outline-1
          outline-slate-700 
          outline-opacity-50
-         outline-offset-2
-         resize-none`
-      )}
+         outline-offset-2 ${className}`}
     />
   );
 };
