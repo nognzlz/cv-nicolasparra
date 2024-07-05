@@ -10,11 +10,13 @@ export const Textarea = ({
   name,
   placeholder,
   disabled,
+  error,
 }: {
   name: string;
   placeholder?: string;
   className?: string;
   disabled?: boolean;
+  error?: boolean;
 }) => {
   const { register } = useFormContext();
   return (
@@ -37,7 +39,8 @@ export const Textarea = ({
          outline-slate-700 
          outline-opacity-50
          outline-offset-2
-         resize-none`
+         resize-none`,
+        { "border-red-300 border-2 border-opacity-100": error || false }
       )}
       disabled={disabled}
     />

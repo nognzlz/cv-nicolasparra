@@ -1,10 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Heading } from "../Heading";
-import { Space_Grotesk } from "next/font/google";
 import clsx from "clsx";
-
-const playpenSans = Space_Grotesk({ subsets: ["latin"], weight: "300" });
 
 export const Hero = () => {
   return (
@@ -29,12 +26,7 @@ export const Hero = () => {
             />
           </div>
           <div className="flex flex-col items-center text-center py-4 px-8">
-            <Heading
-              className={clsx(
-                "drop-shadow-glow text-green-400",
-                playpenSans.className
-              )}
-            >
+            <Heading className={clsx("drop-shadow-glow")}>
               Nicolas Gonzalez Parra
             </Heading>
           </div>
