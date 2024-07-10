@@ -2,6 +2,8 @@ import { Hero } from "@/components/Hero";
 import clsx from "clsx";
 import { Nunito } from "next/font/google";
 import { Computer } from "@/components/Icons/Computer";
+import { Button } from "@/components/Button";
+import Link from "next/link";
 
 const nunito = Nunito({ weight: "400", subsets: ["latin"] });
 
@@ -20,6 +22,14 @@ export default function Home() {
       >
         Software development services
       </p>
+      <div className="flex flex-col my-8 items-center gap-y-4">
+        <Link href="/about-me">
+          <Button>Know more about me</Button>
+        </Link>
+        <Link href="contact-me">
+          <Button>Get in touch</Button>
+        </Link>
+      </div>
     </>
   );
 }
