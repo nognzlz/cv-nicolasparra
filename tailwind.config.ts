@@ -15,10 +15,7 @@ const config: Config = {
         "gradient-primary": `linear-gradient(114.16deg, hsl(37, 99%, 67%) 30.83%, hsl(316, 73%, 52%) 70.62%)`,
       }),
       dropShadow: {
-        glow: [
-          "0 -40px 30px rgba(255,255, 255, 0.35)",
-          "0 0px 15px rgba(255, 255,255, 0.2)",
-        ],
+        glow: ["0 0 30px rgba(255,255, 255, 0.35)"],
       },
     },
   },

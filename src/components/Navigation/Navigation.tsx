@@ -8,6 +8,7 @@ import { Nunito } from "next/font/google";
 const MENU_ITEMS = [
   { label: "Home", url: "/" },
   { label: "Contact me", url: "/contact-me" },
+  { label: "About me", url: "/about-me" },
 ];
 
 const nunito = Nunito({ weight: "400", subsets: ["latin"] });
