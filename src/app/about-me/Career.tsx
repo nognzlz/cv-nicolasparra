@@ -9,6 +9,15 @@ import {
 } from "@headlessui/react";
 import { AnimatePresence, easeOut, motion } from "framer-motion";
 import { WorkExperience } from "./actions";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { Nunito } from "next/font/google";
+import clsx from "clsx";
+
+const nunito = Nunito({
+  weight: ["300", "400", "500"],
+  subsets: ["latin"],
+  style: ["italic", "normal"],
+});
 
 const Accordion = ({
   button,
@@ -18,13 +27,24 @@ const Accordion = ({
   content: ReactElement;
 }) => {
   return (
-    <Disclosure as="div" className={"w-full"}>
+    <Disclosure as="div" className={"w-full"} defaultOpen>
       {({ open }) => (
         <>
           <DisclosureButton
-            className={"w-full border-b pb-2 text-left border-gray-500"}
+            className={
+              "w-full py-2 px-4 text-left bg-slate-700 rounded-lg shadow-slate-900 shadow-md"
+            }
           >
-            {button}
+            <div className="flex flex-row justify-between items-center">
+              {button}
+              <div
+                className={`${
+                  open ? "transform rotate-180" : ""
+                } transition-transform ease-out duration-300`}
+              >
+                <ChevronDownIcon className="w-5 h-5 text-white rounded-full bg-slate-600 p-0.5" />
+              </div>
+            </div>
           </DisclosureButton>
           <div className="overflow-hidden py-2">
             <AnimatePresence>
@@ -37,7 +57,7 @@ const Accordion = ({
                   exit={{ opacity: 0, y: -24 }}
                   translate="yes"
                   transition
-                  className="origin-top"
+                  className="origin-top pt-4 pl-4"
                 >
                   {content}
                 </DisclosurePanel>
@@ -56,19 +76,35 @@ export const Career = ({
   workExperiences: WorkExperience[];
 }) => {
   return (
-    <div className="flex flex-col gap-y-2 items-center max-w-md ">
+    <div className="flex flex-col gap-y-2 items-center w-full md:max-w-xl px-4 md:px-0">
       <Heading level={2}>Career</Heading>
       <div className="w-full my-8">
         {workExperiences.map(({ company, position, duration, jobItems }) => (
           <Accordion
             key={`${company}-${duration}`}
-            button={<div className="text-gray-100">{company}</div>}
+            button={
+              <div
+                className={clsx(
+                  "text-gray-100 font-semibold",
+                  nunito.className
+                )}
+              >
+                {company} -{" "}
+                <span className="text-gray-400 font-normal italic">
+                  {position}
+                </span>
+              </div>
+            }
             content={
-              <div className="text-gray-100">
-                <ul>
+              <div className={clsx("text-gray-100 mb-6", nunito.className)}>
+                <p className="text-gray-400 font-normal italic mb-4">
+                  {duration}
+                </p>
+                <ul className="flex flex-col gap-y-6">
                   {jobItems.map((item) => (
-                    <li className="block my-2" key={item}>
-                      {item}
+                    <li className="flex flex-row items-baseline" key={item}>
+                      <div className="w-3 h-3 bg-gradient-primary rounded-full mr-3 flex-shrink-0" />
+                      <div className="text-sm">{item}</div>
                     </li>
                   ))}
                 </ul>
