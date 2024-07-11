@@ -13,6 +13,8 @@
     "@heroicons/react": "^2.1.4",
     "@hookform/resolvers": "^3.8.0",
     "clsx": "^2.1.1",
+    "firebase": "^10.12.3",
+    "framer-motion": "^11.3.0",
     "next": "14.2.3",
     "nodemailer": "^6.9.14",
     "react": "^18",

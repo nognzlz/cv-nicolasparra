@@ -65,12 +65,13 @@ export const Technologies = () => {
       </div>
     );
   };
+
   return (
     <div className="flex flex-col gap-y-2 items-center w-full">
       <Heading level={2}>Technologies</Heading>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-12 align-middle my-8 ">
         {TECH_ICONS.map(({ src, name, alt }) => (
-          <TechComponent src={src} name={name} alt={alt} />
+          <TechComponent src={src} name={name} alt={alt} key={src} />
         ))}
       </div>
     </div>
