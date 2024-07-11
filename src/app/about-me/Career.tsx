@@ -27,7 +27,7 @@ const Accordion = ({
   content: ReactElement;
 }) => {
   return (
-    <Disclosure as="div" className={"w-full"} defaultOpen>
+    <Disclosure as="div" className={"w-full"}>
       {({ open }) => (
         <>
           <DisclosureButton
