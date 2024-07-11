@@ -67,7 +67,9 @@ export const Career = ({
               <div className="text-gray-100">
                 <ul>
                   {jobItems.map((item) => (
-                    <li>{item}</li>
+                    <li className="block my-2" key={item}>
+                      {item}
+                    </li>
                   ))}
                 </ul>
               </div>
