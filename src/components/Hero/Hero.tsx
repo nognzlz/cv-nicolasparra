@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Heading } from "../Heading";
 import clsx from "clsx";
+import nico from "../../../public/images/nicolas.jpeg";
 
 export const Hero = () => {
   return (
@@ -19,10 +20,11 @@ export const Hero = () => {
         <div className="flex md:flex-row flex-col gap-x-8 items-center justify-center">
           <div className="relative w-32 h-32 md:w-48 md:h-48">
             <Image
-              src={"/images/nicolas.jpeg"}
+              src={nico}
               alt="Nicolas"
               layout="fill"
               className="rounded-full"
+              placeholder="blur"
             />
           </div>
           <div className="flex flex-col items-center text-center py-4 px-8">

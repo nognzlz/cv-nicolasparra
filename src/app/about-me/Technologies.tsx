@@ -59,6 +59,8 @@ export const Technologies = () => {
             width={120}
             key={src}
             className="drop-shadow-glow"
+            placeholder="blur"
+            blurDataURL={src}
           />
           <div className={clsx("text-gray-100", nunito.className)}>{name}</div>
         </div>
