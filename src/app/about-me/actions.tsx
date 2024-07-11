@@ -1,8 +1,13 @@
 // Required for side-effects
 import "firebase/firestore";
 import { initializeServerApp } from "firebase/app";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
-import { object } from "zod";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  orderBy,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -24,6 +29,7 @@ async function initializeApp() {
 }
 
 export type WorkExperience = {
+  order: number;
   company: string;
   position: string;
   duration: string;
@@ -36,18 +42,20 @@ export async function getWorkExperiences(): Promise<WorkExperience[]> {
     throw new Error("Error initializing app");
   }
   const workExperiencesCol = collection(db, "WorkExperiences");
-  const workExperiencesSnapshot = await getDocs(workExperiencesCol);
-  const workExperiencesList = workExperiencesSnapshot.docs.map((doc) =>
-    doc.data()
+  const workExperiencesSnapshot = await getDocs(
+    query(workExperiencesCol, orderBy("order"))
   );
+  const workExperiencesList = workExperiencesSnapshot.docs
+    .map((doc) => doc.data())
+    .sort((a, b) => a.order - b.order);
 
   const dataIsWorkExperience = (data: unknown): data is WorkExperience => {
     if (typeof data !== "object") return false;
     if (!data) return false;
-    if (Object.keys(data).length !== 4) return false;
+    if (Object.keys(data).length !== 5) return false;
 
     Object.keys(data).forEach((key) => {
-      if (!(key in ["company", "position", "duration", "jobItems"])) {
+      if (!(key in ["company", "position", "duration", "jobItems", "order"])) {
         return false;
       }
     });
