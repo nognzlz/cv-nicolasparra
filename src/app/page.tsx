@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="flex w-90% md:w-[750px] mx-auto flex-col items-center p-12 bg-gradient-radial from-slate-300/25 from-10% via-transparent via-55% to-transparent">
+      {/* <div className="flex w-90% md:w-[750px] mx-auto flex-col items-center p-12 bg-gradient-radial from-slate-300/25 from-10% via-transparent via-55% to-transparent">
         <Computer className="md:w-64 md:h-64 w-48 h-48" />
       </div>
       <p
@@ -21,15 +21,15 @@ export default function Home() {
         )}
       >
         Software development services
-      </p>
-      <div className="flex flex-col my-8 items-center gap-y-4">
+      </p> */}
+      {/* <div className="flex flex-col my-8 items-center gap-y-4">
         <Link href="/about-me">
           <Button>Know more about me</Button>
         </Link>
         <Link href="contact-me">
           <Button>Get in touch</Button>
         </Link>
-      </div>
+      </div> */}
     </>
   );
 }
