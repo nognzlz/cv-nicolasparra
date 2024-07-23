@@ -8,7 +8,7 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { AnimatePresence, easeOut, motion } from "framer-motion";
-import { WorkExperience } from "./actions";
+import { WorkExperience } from "@/types/Career";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Nunito } from "next/font/google";
 import clsx from "clsx";

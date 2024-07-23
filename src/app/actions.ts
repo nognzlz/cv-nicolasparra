@@ -8,6 +8,7 @@ import {
   query,
   orderBy,
 } from "firebase/firestore";
+import { WorkExperience } from "@/types/Career";
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -27,14 +28,6 @@ async function initializeApp() {
     console.error("Error initializing app: ", error);
   }
 }
-
-export type WorkExperience = {
-  order: number;
-  company: string;
-  position: string;
-  duration: string;
-  jobItems: string[];
-};
 
 export async function getWorkExperiences(): Promise<WorkExperience[]> {
   const db = await initializeApp();
