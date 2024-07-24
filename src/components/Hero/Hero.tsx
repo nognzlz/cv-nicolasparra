@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { ChevronDoubleDownIcon } from "@heroicons/react/24/solid";
-import { Link } from "react-scroll";
+import { animateScroll, Link } from "react-scroll";
 
 interface Props {
   onScrollDown?: () => void;
@@ -71,14 +71,19 @@ export const Hero = ({ onScrollDown }: Props) => {
                   </h1>
                 )}
 
-                <Link to="about-me" smooth={true} duration={800}>
+                <Link
+                  to="about-me-inside-container"
+                  containerId="mainContainer"
+                  smooth={true}
+                  duration={100}
+                >
                   <button
                     className="text-gray-300 mt-16 flex flex-col items-center gap-y-3 cursor-pointer"
                     onClick={() => {
                       setItsNiceToHaveYouVisible(true);
                     }}
                   >
-                    <div>Scroll down</div>
+                    <div>About me</div>
                     <div className="animate-pulse">
                       <ChevronDoubleDownIcon className="w-8 h-8 animate-bounce" />
                     </div>
