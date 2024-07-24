@@ -3,7 +3,6 @@ import { Heading } from "../Heading";
 import { Intro } from "./Intro";
 import { Technologies } from "./Technologies";
 import { Career } from "./Career";
-import { Element } from "react-scroll";
 
 interface Props {
   workExperiences: any;
