@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Nunito } from "next/font/google";
 import { Link as ScrollLink } from "react-scroll";
-import path from "path";
 
 const MENU_ITEMS = [
   { label: "Home", url: "/" },
