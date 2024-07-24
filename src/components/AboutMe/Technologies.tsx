@@ -50,7 +50,7 @@ export const Technologies = () => {
     name: string;
   }) => {
     return (
-      <div className="flex flex-col gap-y-2 items-center">
+      <div className="flex flex-col gap-y-2 items-center justify-center">
         <div className="flex flex-col gap-y-2 items-center">
           <Image
             alt={alt}
@@ -69,7 +69,7 @@ export const Technologies = () => {
   };
 
   return (
-    <div className="flex flex-col gap-y-2 items-center w-full">
+    <div className="flex flex-col gap-y-2 items-center justify-center w-full min-h-[calc(100vh-140px)]">
       <Heading level={2}>Technologies</Heading>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-12 align-middle my-8 ">
         {TECH_ICONS.map(({ src, name, alt }) => (

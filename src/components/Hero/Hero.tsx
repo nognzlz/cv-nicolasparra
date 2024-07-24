@@ -33,7 +33,7 @@ export const Hero = ({ onScrollDown }: Props) => {
   }, []);
 
   return (
-    <div className="relative w-full h-[calc(100vh-60px)]">
+    <div className="relative w-full min-h-[calc(100vh-140px)]">
       <div className="absolute h-full flex flex-col items-center justify-center bg-transparent bg-opacity-80 md:mx-auto w-full">
         <div className="flex md:flex-row flex-col gap-x-8 items-center justify-center">
           <div className="flex flex-col relative items-center text-center py-4 px-8 w-full">
