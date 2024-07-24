@@ -35,8 +35,6 @@ export const Hero = ({ onScrollDown }: Props) => {
     }, 5700);
   }, [params]);
 
-  if (window.location.hash !== "") return null;
-
   return (
     <div className="relative w-full h-[calc(100vh-60px)]">
       <div className="absolute h-full flex flex-col items-center justify-center bg-transparent bg-opacity-80 md:mx-auto w-screen">
