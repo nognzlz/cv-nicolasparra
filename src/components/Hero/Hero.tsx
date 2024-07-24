@@ -2,7 +2,6 @@
 import React from "react";
 import { ChevronDoubleDownIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-scroll";
-import { useParams } from "next/navigation";
 
 interface Props {
   onScrollDown?: () => void;
@@ -15,8 +14,6 @@ export const Hero = ({ onScrollDown }: Props) => {
   const [buildThingsVisible, setBuildThingsVisible] = React.useState(false);
   const [itsNiceToHaveYouVisible, setItsNiceToHaveYouVisible] =
     React.useState(false);
-
-  const params = useParams();
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -33,11 +30,11 @@ export const Hero = ({ onScrollDown }: Props) => {
       setImNicoVisible(false);
       setBuildThingsVisible(true);
     }, 5700);
-  }, [params]);
+  }, []);
 
   return (
     <div className="relative w-full h-[calc(100vh-60px)]">
-      <div className="absolute h-full flex flex-col items-center justify-center bg-transparent bg-opacity-80 md:mx-auto w-screen">
+      <div className="absolute h-full flex flex-col items-center justify-center bg-transparent bg-opacity-80 md:mx-auto w-full">
         <div className="flex md:flex-row flex-col gap-x-8 items-center justify-center">
           <div className="flex flex-col relative items-center text-center py-4 px-8 w-full">
             {heyThereVisible && (
