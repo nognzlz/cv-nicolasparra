@@ -13,7 +13,7 @@ export const AboutMe = ({ workExperiences }: Props) => {
     <>
       <div id="about-me" />
       <div className="container mx-auto flex flex-col items-center my-8 gap-y-12">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center h-[calc(100vh-20px)] justify-center">
           <Heading>ABOUT ME</Heading>
           <Intro />
         </div>
