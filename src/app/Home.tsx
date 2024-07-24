@@ -23,7 +23,7 @@ export const Home = ({ workExperiences }: Props) => {
       <div className="snap-always snap-center">
         <AboutMe workExperiences={workExperiences} />
       </div>
-      <div className="snap-always snap-center">
+      <div className="snap-always snap-start">
         <Technologies />
       </div>
       <div className="snap-always snap-start">
