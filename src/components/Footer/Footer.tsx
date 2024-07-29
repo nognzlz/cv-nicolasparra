@@ -5,7 +5,7 @@ import { Nunito } from "next/font/google";
 
 const nunito = Nunito({ weight: "400", subsets: ["latin"] });
 
-const BG_CLASSES = "bg-gradient-to-tr from-slate-700 to-blue-950";
+const BG_CLASSES = "bg-slate-800 shadow-md";
 
 export const Footer = () => {
   return (

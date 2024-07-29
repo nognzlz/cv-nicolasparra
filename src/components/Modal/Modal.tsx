@@ -44,7 +44,7 @@ export const Modal = ({
         >
           <div
             className={clsx(
-              "fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity",
+              "fixed inset-0 bg-slate-700 bg-opacity-75 transition-opacity",
               mobileFullscreen && "hidden sm:block"
             )}
           />
@@ -97,7 +97,7 @@ export const Modal = ({
                   </div>
                   <XMarkIcon
                     ref={exitButtonRef}
-                    className="absolute right-4 top-4 h-6 w-6 cursor-pointer text-gray-400 hover:text-gray-500"
+                    className="absolute right-4 top-4 h-6 w-6 cursor-pointer text-gray-200 hover:text-gray-300 transition-colors duration-75"
                     onClick={onClose}
                   />
                 </div>

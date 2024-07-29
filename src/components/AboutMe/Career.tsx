@@ -32,7 +32,7 @@ const Accordion = ({
         <>
           <DisclosureButton
             className={
-              "w-full py-2 px-4 text-left bg-slate-700 rounded-lg shadow-slate-900 shadow-md"
+              "w-full py-2 px-4 text-left bg-slate-800 rounded-lg shadow-slate-900 shadow-md"
             }
           >
             <div className="flex flex-row justify-between items-center">
@@ -42,7 +42,7 @@ const Accordion = ({
                   open ? "transform rotate-180" : ""
                 } transition-transform ease-out duration-300`}
               >
-                <ChevronDownIcon className="w-5 h-5 text-white rounded-full bg-slate-600 p-0.5" />
+                <ChevronDownIcon className="w-5 h-5 text-white rounded-full bg-slate-700 p-0.5" />
               </div>
             </div>
           </DisclosureButton>
