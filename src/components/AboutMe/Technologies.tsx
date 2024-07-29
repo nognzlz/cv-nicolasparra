@@ -69,7 +69,7 @@ export const Technologies = () => {
   };
 
   return (
-    <div className="flex flex-col gap-y-2 items-center justify-center w-full min-h-[calc(100vh-140px)] py-8">
+    <div className="flex flex-col gap-y-2 items-center justify-center w-full min-h-[calc(100vh-80px)] py-8">
       <Heading level={2}>Technologies</Heading>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-12 align-middle my-8 ">
         {TECH_ICONS.map(({ src, name, alt }) => (

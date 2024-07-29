@@ -76,7 +76,7 @@ export const Career = ({
   workExperiences: WorkExperience[];
 }) => {
   return (
-    <div className="flex flex-col gap-y-2 items-center justify-center w-full md:max-w-xl px-4 md:px-0 mx-auto min-h-[calc(100vh-140px)] py-8">
+    <div className="flex flex-col gap-y-2 items-center justify-center w-full md:max-w-xl px-4 md:px-0 mx-auto min-h-[calc(100vh-80px)] py-8">
       <Heading level={2}>Career</Heading>
       <div className="w-full my-8">
         {workExperiences.map(({ company, position, duration, jobItems }) => (

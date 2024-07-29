@@ -5,10 +5,5 @@ type Props = {
 };
 
 export const PageContent = ({ children }: Props) => {
-  return (
-    <main className="w-full h-full">
-      <div className="h-16" />
-      {children}
-    </main>
-  );
+  return <main className="w-full h-full">{children}</main>;
 };

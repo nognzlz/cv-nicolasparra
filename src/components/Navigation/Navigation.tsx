@@ -4,12 +4,10 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Nunito } from "next/font/google";
-import { Link as ScrollLink } from "react-scroll";
 
 const MENU_ITEMS = [
   { label: "Home", url: "/" },
   { label: "Contact me", url: "/contact-me" },
-  { label: "About me", url: "/#about-me" },
 ];
 
 const nunito = Nunito({ weight: "400", subsets: ["latin"] });
