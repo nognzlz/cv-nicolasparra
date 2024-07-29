@@ -32,7 +32,6 @@ export const Textarea = ({
         border-gray-200
         border-opacity-50
         rounded-lg 
-        md:w-[750px]
         w-full
         text-gray-100 p-4 
         outline-1

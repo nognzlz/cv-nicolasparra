@@ -21,15 +21,17 @@ export const Button = ({
   return (
     <button
       className={clsx(
-        ` text-gray-100
-            disabled:opacity-50
-         bg-slate-800 border
+        `text-gray-100
+          disabled:opacity-50
+         bg-slate-800
+         border
          border-gray-200 border-opacity-50
           rounded-lg px-4 py-2
-          outline-1 outline-slate-700
+          outline-1 outline-slate-800
           outline-opacity-50 outline-offset-2
-          hover:bg-opacity-80
-          focus:bg-opacity-80`,
+          hover:bg-slate-700 bg-opacity-40
+          focus:bg-opacity-80
+          transition-colors`,
         className,
         nunito.className
       )}
