@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Nunito } from "next/font/google";
 import clsx from "clsx";
-import nico from "../../../public/images/nico.jpeg";
+import nico from "../../../public/images/nico-bg-removed.png";
 
 const nunito = Nunito({ weight: "400", subsets: ["latin"] });
 
@@ -12,7 +12,7 @@ export const Intro = () => {
       <Image
         src={nico}
         alt="Nicolas Gonzalez Parra"
-        className="rounded-full w-28"
+        className="w-32"
         placeholder="blur"
       />
       <p
