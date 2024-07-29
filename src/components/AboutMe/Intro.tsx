@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Nunito } from "next/font/google";
 import clsx from "clsx";
-import nico from "../../../public/images/nicolas.jpeg";
+import nico from "../../../public/images/nico.jpeg";
 
 const nunito = Nunito({ weight: "400", subsets: ["latin"] });
 
