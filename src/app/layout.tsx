@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { PageWrapper } from "@/components/Layout/PageWrapper";
 import { PageContent } from "@/components/Layout/PageContent";
-import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +26,7 @@ export default function RootLayout({
         </PageWrapper>
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-9FLMMN8401" />
     </html>
   );
 }
