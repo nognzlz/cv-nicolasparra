@@ -2,6 +2,7 @@
 import React from "react";
 import { ChevronDoubleDownIcon } from "@heroicons/react/24/solid";
 import { animateScroll, Link } from "react-scroll";
+import { sendGAEvent } from "@next/third-parties/google";
 
 interface Props {
   onScrollDown?: () => void;
@@ -81,6 +82,11 @@ export const Hero = ({ onScrollDown }: Props) => {
                     className="text-gray-300 mt-16 flex flex-col items-center gap-y-3 cursor-pointer"
                     onClick={() => {
                       setItsNiceToHaveYouVisible(true);
+                      sendGAEvent(
+                        "Hero",
+                        "Scroll down",
+                        "User Clicked scroll down"
+                      );
                     }}
                   >
                     <div>About me</div>
