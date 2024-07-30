@@ -37,6 +37,16 @@ const TECH_ICONS = [
     name: "Tailwind",
     alt: "tailwind logo",
   },
+  {
+    src: "/Images/tech/Docker.png",
+    name: "Docker",
+    alt: "docker logo",
+  },
+  {
+    src: "/Images/tech/Postgre.png",
+    name: "PostgreSQL",
+    alt: "postgresql logo",
+  },
 ];
 
 export const Technologies = () => {
